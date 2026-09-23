@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ai-trading-paper-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: REQUIRE_SECURE_CONFIG
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: "https://YOUR-WEB-ORIGIN"
+      - key: REDIS_URL
+        sync: false

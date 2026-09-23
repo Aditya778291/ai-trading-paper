@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "AI Trading Paper",
+    "slug": "ai-trading-paper",
+    "version": "1.8.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.aitrading.paper",
+      "versionCode": 9,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0b1020"
+      },
+      "permissions": [
+        "INTERNET"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.aitrading.paper",
+      "buildNumber": "9"
+    },
+    "extra": {
+      "apiBaseUrl": "",
+      "eas": {
+        "projectId": "6b391d57-adb3-4440-afa1-734afbffba72"
+      }
+    }
+  }
+}

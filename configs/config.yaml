@@ -1,0 +1,40 @@
+project:
+  name: ai-trading-platform
+  timezone: Asia/Kolkata
+
+data:
+  symbol: "^NSEI"
+  symbols:
+    - "^NSEI"
+    - "^NSEBANK"
+    - "^CNXFIN"
+    - "^BSESN"
+    - "RELIANCE.NS"
+    - "TCS.NS"
+    - "INFY.NS"
+    - "HDFCBANK.NS"
+    - "ICICIBANK.NS"
+    - "SBIN.NS"
+    - "ITC.NS"
+    - "LT.NS"
+    - "BHARTIARTL.NS"
+    - "TATAMOTORS.NS"
+  interval: "1d"
+  period: "5y"
+  output_dir: "data/raw"
+  file_format: "parquet"
+
+validation:
+  max_return_abs: 0.30
+  warn_on_missing_dates: true
+
+logging:
+  level: "INFO"
+  file: "logs/app.log"
+
+features:
+  sma_windows: [10, 20, 50, 100, 200]
+  ema_windows: [9, 21, 50]
+  rsi_period: 14
+  atr_period: 14
+  volatility_window: 20
